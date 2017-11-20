@@ -33,3 +33,19 @@ while top <= bottom:
 	else
 		return bottom - top +1
 		
+The updated version is in the following:
+BWMatching(first_occurrence, last_column, pattern, count):
+	top <- 0
+	bottom <- |last_column| -1
+	while top <= bottom:
+		if Pattern is nonempty
+			symbol <- last letter in pattern
+			remove last letter from pattern
+			
+			if positions from top to bottom in last_column contain an occurrence of symbol:
+				top <- first_occurrence(symbol) + Count_symbol(top, last_column)
+				bottom <- first_occurrence(symbol) + count_symbol(bottom+1, last_column) -1
+			else
+				return 0
+		else 
+			return bottom-top +1 
