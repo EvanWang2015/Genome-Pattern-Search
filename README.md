@@ -14,6 +14,7 @@ top and bottom updated to narrow the target region.
 
 The pseudocode is in the following:
 //Assume last_column is given with a symbol of '$'
+
 BWMatching (first_column, last_column, pattern, last_to_first):
 top <-0
 bottom <- |last_column|-1 
@@ -34,6 +35,7 @@ while top <= bottom:
 		return bottom - top +1
 		
 The updated version is in the following:
+
 BWMatching(first_occurrence, last_column, pattern, count):
 	top <- 0
 	bottom <- |last_column| -1
